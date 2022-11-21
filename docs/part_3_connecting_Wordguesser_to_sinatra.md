@@ -15,7 +15,7 @@ You've already met Sinatra.  Here's what's new in the Sinatra app skeleton [`app
 <details>
   <summary><code>@game</code> in this context is an instance variable of what
 class?  (Careful-- tricky!)</summary>
-  <p><blockquote>It's an instance variable of the <code>WordGuesserApp</code> class in the app.rb file.  Remember we are dealing with two Ruby classes here: the <code>WordGuesserGame</code> class encapsulates the game logic itself (that is, the Model in model-view-controller), whereas <code>WordGuesserApp</code> encapsulates the logic that lets us deliver the game as SaaS (you can roughly think of it as the Controller logic plus the ability to render the views via <code>erb</code>).</blockquote></p>
+  <p><blockquote>It's an instance variable of the <code>HangPersonApp</code> class in the app.rb file.  Remember we are dealing with two Ruby classes here: the <code>HangPersonGame</code> class encapsulates the game logic itself (that is, the Model in model-view-controller), whereas <code>HangPersonApp</code> encapsulates the logic that lets us deliver the game as SaaS (you can roughly think of it as the Controller logic plus the ability to render the views via <code>erb</code>).</blockquote></p>
 </details>
 
 The Session

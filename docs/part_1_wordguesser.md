@@ -30,11 +30,11 @@ To make the game fun to play, each time you start a new game the app will actual
 
 This will fire up the Autotest framework, which looks for various files to figure out what kind of app you're testing and what test framework you're using.  In our case, it will discover the file called `.rspec`, which contains RSpec options and indicates we're using the RSpec testing framework.  Autotest will therefore look for test files under `spec/` and the corresponding class files in `lib/`.
 
-We've provided a set of 18 test cases to help you develop the game class. Take a look at `spec/wordguesser_game_spec.rb`.  It specifies behaviors that it expects from the class `lib/wordguesser_game.rb`.  Initially, we have added `, :pending => true` to every spec, so when Autotest first runs these, you should see no test cases yet, and the report "0 examples, 0 failures."
+We've provided a set of 18 test cases to help you develop the game class. Take a look at `spec/hangperson_game_spec.rb.rb`.  It specifies behaviors that it expects from the class `lib/hangperson_game.rb`.  Initially, we have added `, :pending => true` to every spec, so when Autotest first runs these, you should see no test cases yet, and the report "0 examples, 0 failures."
 
 Now, with Autotest still running, delete `, :pending => true` from line 12, and save the file.  You should immediately see Autotest wake up and re-run the tests.  You should now have 1 examples, 1 failure.
 
-The `describe 'new'` block means "the following block of tests describe the behavior of a 'new' WordGuesserGame instance."  The `WordGuesserGame.new` line causes a new instance to be created, and the next lines verify the presence and values of instance variables.
+The `describe 'new'` block means "the following block of tests describe the behavior of a 'new' HangPersonGame instance."  The `HangPersonGame.new` line causes a new instance to be created, and the next lines verify the presence and values of instance variables.
 
 #### Self Check Questions
 
@@ -42,7 +42,7 @@ The `describe 'new'` block means "the following block of tests describe the beha
   <summary>According to our test cases, how many arguments does the
 game class constructor expect, and therefore what will the first line of
 the method definition look like that you must add to
-<code>wordguesser_game.rb</code>?</summary>
+<code>hangperson_game.rb</code>?</summary>
   <p><blockquote>One argument (in this example, "glorp"), and since constructors in
 Ruby are always named <code>initialize</code>, the first line will be
 <code>def initialize(new_word)</code> or something similar.</blockquote></p>
@@ -52,13 +52,13 @@ Ruby are always named <code>initialize</code>, the first line will be
 
 <details>
   <summary>According to the tests in this <code>describe</code> block, what
-instance variables is a WordGuesserGame expected to have?</summary>
+instance variables is a HangPersonGame expected to have?</summary>
   <p><blockquote><code>@word</code>, <code>@guesses</code>, and <code>@wrong_guesses</code>.</blockquote></p>
 </details>
 
 <br />
 
-In order to make this failing test pass you'll need to create getters and setters for the instance variables mentioned in the self check tests above.  Hint: use `attr_accessor`.  When you've done this successfully and saved `wordguesser_game.rb`, `autotest` should wake up again and the examples that were previously failing should now be passing (green).
+In order to make this failing test pass you'll need to create getters and setters for the instance variables mentioned in the self check tests above.  Hint: use `attr_accessor`.  When you've done this successfully and saved `hangperson_game.rb`, `autotest` should wake up again and the examples that were previously failing should now be passing (green).
 
 Continue in this manner, removing `, :pending => true` from one or two examples at a time working your way down the specs, until you've implemented all the instance methods of the game class: `guess`, which processes a guess and modifies the instance variables `wrong_guesses` and `guesses` accordingly; `check_win_or_lose`, which returns one of the symbols `:win`, `:lose`, or `:play` depending on the current game state; and `word_with_guesses`, which substitutes the correct guesses made so far into the word.
 

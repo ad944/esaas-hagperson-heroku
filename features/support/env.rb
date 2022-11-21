@@ -12,17 +12,17 @@ require 'rspec'
 require 'rack_session_access'
 require 'byebug'
 
-Capybara.app = WordGuesserApp
+Capybara.app = HangPersonApp
 Capybara.app.configure do |app|
   app.use RackSessionAccess::Middleware
 end
 
-class WordGuesserAppWorld
+class HangPersonAppWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
 end
 
 World do
-  WordGuesserAppWorld.new
+  HangPersonAppWorld.new
 end

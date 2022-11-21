@@ -1,7 +1,7 @@
 Feature: start new game
 
   As a player
-  So I can play Wordguesser
+  So I can play HangPerson
   I want to start a new game
 
 Scenario: I start a new game

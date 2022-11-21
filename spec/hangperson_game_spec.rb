@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'wordguesser_game'
+require 'hangperson_game'
 
-describe WordGuesserGame do
+describe HangPersonGame do
   # helper function: make several guesses
   def guess_several_letters(game, letters)
     letters.chars do |letter|
@@ -10,9 +10,9 @@ describe WordGuesserGame do
   end
 
   describe 'new' do
-    it "takes a parameter and returns a WordGuesserGame object" do      
-      @game = WordGuesserGame.new('glorp')
-      expect(@game).to be_an_instance_of(WordGuesserGame)
+    it "takes a parameter and returns a HangPersonGame object" do      
+      @game = HangPersonGame.new('glorp')
+      expect(@game).to be_an_instance_of(HangPersonGame)
       expect(@game.word).to eq('glorp')
       expect(@game.guesses).to eq('')
       expect(@game.wrong_guesses).to eq('')
@@ -22,7 +22,7 @@ describe WordGuesserGame do
   describe 'guessing' do
     context 'correctly' do
       before :each do
-        @game = WordGuesserGame.new('garply')
+        @game = HangPersonGame.new('garply')
         @valid = @game.guess('a')
       end
       it 'changes correct guess list' do
@@ -35,7 +35,7 @@ describe WordGuesserGame do
     end
     context 'incorrectly' do
       before :each do
-        @game = WordGuesserGame.new('garply')
+        @game = HangPersonGame.new('garply')
         @valid = @game.guess('z')
       end
       it 'changes wrong guess list' do
@@ -48,7 +48,7 @@ describe WordGuesserGame do
     end
     context 'same letter repeatedly' do
       before :each do
-        @game = WordGuesserGame.new('garply')
+        @game = HangPersonGame.new('garply')
         guess_several_letters(@game, 'aq')
       end
       it 'does not change correct guess list' do
@@ -72,7 +72,7 @@ describe WordGuesserGame do
     end
     context 'invalid' do
       before :each do
-        @game = WordGuesserGame.new('foobar')
+        @game = HangPersonGame.new('foobar')
       end
       it 'throws an error when empty' do
         expect { @game.guess('') }.to raise_error(ArgumentError)
@@ -88,7 +88,7 @@ describe WordGuesserGame do
 
   describe 'displayed word with guesses' do
     before :each do
-      @game = WordGuesserGame.new('banana')
+      @game = HangPersonGame.new('banana')
     end
     # for a given set of guesses, what should the word look like?
     @test_cases = {
@@ -106,7 +106,7 @@ describe WordGuesserGame do
 
   describe 'game status' do
     before :each do 
-      @game = WordGuesserGame.new('dog')
+      @game = HangPersonGame.new('dog')
     end
     it 'should be win when all letters guessed' do
       guess_several_letters(@game, 'ogd')

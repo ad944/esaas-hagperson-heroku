@@ -1,6 +1,6 @@
 Feature: game over
 
-  As a player playing Wordguesser
+  As a player playing HangPerson
   So I can get back to my life 
   I want to know when the game is over
 

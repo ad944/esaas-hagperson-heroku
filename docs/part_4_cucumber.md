@@ -71,8 +71,8 @@ The scenario fails because the `<form>` tag in `views/new.erb` is incorrect and 
 
 The create-new-game code in the Sinatra app should do the following:
 
-* Call the WordGuesserGame class method `get_random_word`
-* Create a new instance of WordGuesserGame using that word
+* Call the HangPersonGame class method `get_random_word`
+* Create a new instance of HangPersonGame using that word
 * Redirect the browser to the `show` action
 
 View how these steps are actualized in the app.rb file under the `post /create do` route.
@@ -89,7 +89,7 @@ Now stage and commit all files locally, then `git push heroku master` to deploy 
 Develop the scenario for guessing a letter
 -------------------------------------------
 
-For this scenario, in `features/guess.feature`, we've already provided a correct  `show.erb` HTML file that submits the player's guess to the `guess` action.  You already have a `WordGuesserGame#guess` instance method that has the needed functionality.
+For this scenario, in `features/guess.feature`, we've already provided a correct  `show.erb` HTML file that submits the player's guess to the `guess` action.  You already have a `HangPersonGame#guess` instance method that has the needed functionality.
 
 #### Self Check Question
 

@@ -1,5 +1,5 @@
 Feature: guess invalid inputs
-  As a player playing Wordguesser
+  As a player playing HangPerson
   So that I can try and break the app
   I want to see when my guess is invalid
 

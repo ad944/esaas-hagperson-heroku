@@ -1,6 +1,6 @@
 Feature: gain access to the word without guessing it
 
-    As a adversary playing Wordguesser
+    As a adversary playing HangPerson
     So that I can see the word without ever entering a letter
     I want to navigate to a ending page and see the word
 

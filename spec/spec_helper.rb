@@ -17,7 +17,7 @@ set :logging, false
 use Rack::Session::Cookie
 
 def app
-  WordGuesserApp.new!
+  HangPersonApp.new!
 end
 
 def session

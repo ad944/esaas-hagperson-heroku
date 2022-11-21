@@ -4,7 +4,7 @@ Note: Part 2 is just reading/background info for Part 3.
 
 **Goals:**  Understand how to expose your app's behaviors as RESTful actions in a SaaS environment, and how to preserve game state across (stateless) HTTP requests to your app using the appserver's provided abstraction for cookies.
 
-**What you will do:** Create a Sinatra app that makes use of the WordGuesserGame logic developed in the previous part, allowing you to play Wordguesser via  a browser.
+**What you will do:** Create a Sinatra app that makes use of the HangPersonGame logic developed in the previous part, allowing you to play Wordguesser via  a browser.
 
 Game State
 ----------
@@ -24,7 +24,7 @@ In most SaaS apps, the amount of information associated with a user's session is
 
 <details>
   <summary>Enumerate the minimal game state that must be maintained during a game of Wordguesser.</summary>
-  <p><blockquote>The secret word; the list of letters that have been guessed correctly; the list of letters that have been guessed incorrectly.  Conveniently, the well-factored WordGuesserGame class encapsulates this state using its instance variables, as proper object-oriented design recommends.</blockquote></p>
+  <p><blockquote>The secret word; the list of letters that have been guessed correctly; the list of letters that have been guessed incorrectly.  Conveniently, the well-factored HangPersonGame class encapsulates this state using its instance variables, as proper object-oriented design recommends.</blockquote></p>
 </details>
 
 The game as a RESTful resource
